@@ -38,6 +38,7 @@ interface Sale {
 const App: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { items, status, error } = useSelector((state: RootState) => state.data);
+  const logoPath = `${process.env.PUBLIC_URL}/assets/stackline_logo.svg`;
 
   useEffect(() => {
     if (status === "idle") {
@@ -51,7 +52,7 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <div className="header">
-        <img src="/assets/stackline_logo.svg" alt="Logo" className="logo" />
+        <img src={logoPath} alt="Logo" className="logo" />
       </div>
 
       <div className="content">

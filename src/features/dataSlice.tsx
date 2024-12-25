@@ -14,10 +14,13 @@ const initialState: DataState = {
   error: null,
 };
 
+const BASE_URL = process.env.PUBLIC_URL || '';
+const apiUrl = `${BASE_URL}/api/stackline_frontend_assessment_data_2021.json`;
+
 export const fetchData = createAsyncThunk<ProductSalesData[], void>(
   'data/fetchData',
   async () => {
-    const response = await axios.get('/api/stackline_frontend_assessment_data_2021.json');
+    const response = await axios.get(apiUrl);
     return response.data;
   }
 );
