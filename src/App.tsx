@@ -38,7 +38,7 @@ interface Sale {
 const App: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { items, status, error } = useSelector((state: RootState) => state.data);
-  const logoPath = `${process.env.PUBLIC_URL}/assets/stackline_logo.svg`;
+  const logoPath = `./assets/stackline_logo.svg`;
 
   useEffect(() => {
     if (status === "idle") {

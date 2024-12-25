@@ -14,8 +14,7 @@ const initialState: DataState = {
   error: null,
 };
 
-const BASE_URL = process.env.PUBLIC_URL || '/stackline-frontend-assessment';
-const apiUrl = `${BASE_URL}/api/stackline_frontend_assessment_data_2021.json`;
+const apiUrl = `./api/stackline_frontend_assessment_data_2021.json`;
 
 export const fetchData = createAsyncThunk<ProductSalesData[], void>(
   'data/fetchData',

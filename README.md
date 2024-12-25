@@ -17,3 +17,5 @@ What is missing from this?
 - Unit testing
 - Default rendering in the case that the mocked API call fails
 - Navigation based on the tags or product name to other potential sites.
+
+Use the application here: https://alexharrison-js.github.io/stackline-frontend-assessment/
